@@ -4,7 +4,10 @@
   "description": "\"Simple News App\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "engines": {
+    "npm": "6.x"
   },
   "dependencies": {
     "express": "*",
