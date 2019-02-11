@@ -4,6 +4,10 @@
 	app.config(function($routeProvider) {
         $routeProvider
         .when("/", {
+            templateUrl : "views/topnews.html",
+            controller: "NewsCtrl"
+        })
+        .when("/business", {
             templateUrl : "views/business.html",
             controller: "NewsCtrl"
         }) 
