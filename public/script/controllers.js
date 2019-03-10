@@ -1,6 +1,12 @@
 //abcnew
 app.controller('NewsCtrl', function($scope, $http) {
     $scope.$on('$viewContentLoaded', function () {
+    
+    setInterval(function(){
+        $scope.news();
+    },1000);
+})
+$scope.news=function(){
     $scope.businessnews();
     $scope.enternews();
     $scope.healthnews();
@@ -8,7 +14,7 @@ app.controller('NewsCtrl', function($scope, $http) {
     $scope.sportsnews();
     $scope.technews();
     $scope.topnews();
-})
+}
     $scope.businessnews=function(){
 $http.get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a65429315e8a4bd58644f190c2af875b").then(function (response) {
       $scope.businesslist = response.data.articles;
